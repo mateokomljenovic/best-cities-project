@@ -1,0 +1,348 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #2c3e50;
+}
+
+h2,
+h3,
+h4 {
+	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+  position: relative; 
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;	
+	background: rgba(19,43,102, .85);
+  position: absolute;
+  bottom: 0; 
+  width: 100
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+	.name a,
+	.main-nav a {
+		display: block;
+		text-align: center;
+		padding: 10px 15px;
+	}
+	
+	.main-nav a {
+		font-size: .95em;
+		color: #2c3e50;
+		text-transform: uppercase;
+	}
+
+	.main-nav a:hover {
+		color: #3498db;
+	}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.banner,
+.main-footer,
+.secondary-banner,
+.tertiary-banner {
+	text-align: center;
+}
+
+.banner {
+	color: #fff;
+	background: linear-gradient(#2c3e50, transparent 90%),
+              linear-gradient(to top, #344A7C, transparent 90%),
+              #3498db url('../img/flight.jpg') no-repeat center;
+  background-size: cover;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+  .secondary-banner {
+	color: #fff;
+	background: linear-gradient(#2c3e50, transparent 90%),
+              linear-gradient(to top, #344A7C, transparent 90%),
+              #3498db url('../img/train.jpg') no-repeat center;
+    background-size: cover;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+  .tertiary-banner {
+     color: #fff;
+     background: linear-gradient(#2c3e50, transparent 90%),
+                 linear-gradient(to top, #3498db, transparent 90%);
+	 padding: 3.2em 0;
+	 margin-bottom: 60px;
+  }
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+}
+
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 100px;
+	filter: invert(100%);
+
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.icon-location {
+  width: 35px; 
+  position: absolute;
+  top: -15px; 
+  right: -15px; 
+}
+
+.last {
+	padding: 2em;
+}
+.pre-footer {
+	margin: auto;
+	display: none;
+}
+
+.bottom-paragraph {
+	display: block;
+	border: 3px solid white; 
+	margin-top: .5em;
+	margin-bottom: .5em;
+	width: 55%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.social {
+	margin: 1em;
+	width: 30px;
+	height: 30px;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  
+  body {
+  padding-top: 68px; 
+}
+
+  .main-header {
+    position: fixed; 
+    background: #fff; 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+    width: 100%; 
+    top: 0; 
+    z-index: 1000;
+  }
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.name,
+	.col {
+		float: left;
+	}
+
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+	.tagline {
+		font-size: 1.4em;
+	}
+     
+    .pre-footer {
+      width: 80%;
+      height: 300px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    .little {
+      height: 7em; 
+      width: 7em; 
+      margin: auto;
+      border: 3px solid white;
+      border-radius: 50%; 
+    }
+    
+    .bottom-p {
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto;
+    }
+    .bottom-paragraph {
+      height: 3em;
+      padding-top: .5em;
+      width: 6em;
+      border: 2px solid white;
+      text-align: center;
+      margin: auto;
+    }
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1130px) {
+	
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
+
+	.quaternary {
+		width: 40%; 
+		float: left;  
+	}
+    
+    .quinary {
+      width: 50%;
+      float: right;
+    }
+
+    .pre-footer {
+      width: 80%;
+      height: 400px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-grow: 1;
+    }
+
+    .big {
+      width: 11em; 
+      height: 11em;
+    }
+    
+    .bottom-p {
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto;
+    }
+    .bottom-paragraph {
+      height: 3em;
+      padding-top: .5em;
+      width: 8em;
+      border: 2px solid white;
+      text-align: center;
+      margin: auto;
+    }
+
+
+	.clearfix::after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
+
+}
